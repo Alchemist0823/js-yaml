@@ -25,6 +25,7 @@
   "bin": {
     "js-yaml": "bin/js-yaml.js"
   },
+  "types": "./index.d.ts",
   "module": "./dist/js-yaml.mjs",
   "exports": {
     ".": {

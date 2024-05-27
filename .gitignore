@@ -1,6 +1,8 @@
 .nyc_output
 coverage
 demo
+package-lock.json
+.idea
 node_modules
 doc
 benchmark/implementations/*

@@ -2618,7 +2618,7 @@ function composeNode(state, parentIndent, nodeContext, allowToSeek, allowCompact
     if (!type.resolve(state.result, state.tag)) { // `state.result` updated in resolver if matched
       throwError(state, 'cannot resolve a node with !<' + state.tag + '> explicit tag');
     } else {
-      state.result = type.construct(state.result, state.tag);
+      state.result = type.construct(state.result, state.tag, state.anchor);
       if (state.anchor !== null) {
         state.anchorMap[state.anchor] = state.result;
       }
@@ -3847,5 +3847,4 @@ var jsYaml = {
 	safeDump: safeDump
 };
 
-export default jsYaml;
-export { CORE_SCHEMA, DEFAULT_SCHEMA, FAILSAFE_SCHEMA, JSON_SCHEMA, Schema, Type, YAMLException, dump, load, loadAll, safeDump, safeLoad, safeLoadAll, types };
+export { CORE_SCHEMA, DEFAULT_SCHEMA, FAILSAFE_SCHEMA, JSON_SCHEMA, Schema, Type, YAMLException, jsYaml as default, dump, load, loadAll, safeDump, safeLoad, safeLoadAll, types };
